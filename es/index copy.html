@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aldea Umm Promociones</title>
+  <meta name="google-site-verification" content="Oqz7biI0LGCgd7irD47pPEoqnfxAo-VkWOCyouLaVAI" />
+    <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-THC29FTP');
+  </script>
+  <!-- End Google Tag Manager -->
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LFTJSX73N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5LFTJSX73N');
+</script>
+<!-- Google tag (gtag.js) -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '774039395310882');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Facebook Pixel Code -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/gallery1.css" />
+  <link rel="stylesheet" href="../css/cita-virtual.css" />
+  <link rel="stylesheet" href="../css/beneficios.css" />
+  <link rel="stylesheet" href="../css/map.css" />
+  <link rel="stylesheet" href="../css/lotes.css" />
+  <link rel="stylesheet" href="../css/amenidades.css" />
+  <link rel="stylesheet" href="../css/inversion.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/modal.css" />
+</head>
+
+<body>
+   <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THC29FTP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Facebook Pixel (noscript) -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=774039395310882&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Facebook Pixel (noscript) -->
+  <header id="header-container">
+    <div class="text-container">
+      <div class="image-container-mobile">
+        <img src="../assets/aldea-umm-logo.png" alt="Aldea Umm Logo" />
+      </div>
+      <h1 class="title-container">
+        <p class="title">INVIERTE
+        <p id="p-lotes">EN LOTES</p>
+        </p>
+        <p id="residenciales">RESIDENCIALES</p>
+      </h1>
+      <div id="subtitle">
+        <p>desde</p>
+        <h2>$1.1</h2>
+        <p>MDP</p>
+      </div>
+      <div id="text">
+        <p>en</p>
+        <h2>PUERTO MORELOS</h2>
+      </div>
+      <a id="agendar-button" class="agendar-button">AGENDAR</a>
+    </div>
+    <div class="image-container">
+      <img src="../assets/aldea-umm-logo.png" alt="Aldea Umm Logo" />
+    </div>
+    <div class="lang-container">
+      <a href="../es/"><img src="../assets/MEX.png" alt="MEX Logo" /></a>
+      <a href="../en/"><img src="../assets/EU.png" alt="EU Logo" /></a>
+    </div>
+  </header>
+ <div id="formModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <!-- Paso 1: Formulario -->
+    <div class="step step-1">
+      <h2>AGENDA UNA CITA</h2>
+      <form id="Registro-Aldea-Umm">
+        <div class="form-row">
+          <input type="text" name="firstname" placeholder="Nombre" required>
+          <input type="text" name="lastname" placeholder="Apellido" required>
+        </div>
+        <div class="form-row">
+          <div class="country-code" style="display: flex; gap: 0.5rem;">
+            <select id="countryCode" name="countryCode" required>
+              <option value="+1">US +1</option>
+              <option value="+52">MX +52</option>
+              <option value="+34">ES +34</option>
+              <option value="+44">GB +44</option>
+              <option value="+57">CO +57</option>
+              <option value="+54">AR +54</option>
+            </select>
+            <input type="tel" name="phone" placeholder="1234567890" required>
+          </div>
+          <input type="email" name="email" placeholder="Correo Electronico" required>
+        </div>
+        <button type="submit">Siguiente</button>
+      </form>
+    </div>
+
+    <!-- Paso 2: Encuesta intro -->
+    <div class="step step-2 hidden">
+      <h2 id="surveyIntro"></h2>
+      <button id="toStep3">Siguiente</button>
+    </div>
+
+    <!-- Paso 3: Pregunta de contacto -->
+    <div class="step step-3 hidden">
+      <h2 id="motivoQuestion"></h2>
+      <div class="answers-container">
+        <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Vivirlo y disfrutarlo (uso propio)</label>
+        <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y generar plusvalía o rentas (inversión)</label>
+        <label><input type="radio" name="motivo" value="Soy asesor o broker (buscando opciones para mis clientes)">Soy asesor o broker (buscando opciones para mis clientes)</label>
+      </div>
+      <div class="forms-button-container">
+        <button class="back-button" data-back-step="2">Atrás</button>
+        <button id="toStep4">Siguiente</button>
+      </div>
+    </div>
+
+    <!-- Paso 4: Pregunta de inversión -->
+    <div class="step step-4 hidden">
+      <h2>¿Qué tan pronto te gustaría invertir en tu nuevo lote residencial?</h2>
+      <div class="answers-container">
+        <label><input type="radio" name="invertir" value="De inmediato">De inmediato</label>
+        <label><input type="radio" name="invertir" value="En los próximos meses">En los próximos meses</label>
+        <label><input type="radio" name="invertir" value="A largo plazo">A largo plazo</label>
+      </div>
+      <div class="forms-button-container">
+        <button class="back-button" data-back-step="3">Atrás</button>
+        <button id="toStep5">Siguiente</button>
+      </div>
+    </div>
+
+    <!-- Paso 5: Pregunta de precio -->
+    <div class="step step-5 hidden">
+      <h2>¿Estás consciente de que nuestros lotes residenciales comienzan en $1,100,000 MXN?</h2>
+      <div class="answers-container">
+        <label><input type="radio" name="precio" value="Si">Sí</label>
+        <label><input type="radio" name="precio" value="No">No</label>
+      </div>
+      <div class="forms-button-container">
+        <button class="back-button" data-back-step="4">Atrás</button>
+        <button id="toStep6">Siguiente</button> <!-- Ahora va directo al calendario -->
+      </div>
+    </div>
+
+    <!-- Paso 6: Calendario -->
+    <div class="step step-6 hidden">
+      <h2>Selecciona tu cita</h2>
+      <div id="calendarContainer"></div>
+    </div>
+
+  </div>
+</div>
+
+  <section id="first-subtitle-wrapper" style="padding-top: 1rem; padding-bottom: 1rem;">
+    <div id="first-subtitle">
+      <div class="text-container">
+        <p>Un desarrollo</p>
+        <p>natural, sostenible y con alta plusvalía</p>
+      </div>
+      <img class="planta" src="../assets/planta.png" alt="planta">
+    </div>
+  </section>
+  <section id="gallery1">
+    <div class="gallery-container">
+      <img class="gallery1-item item-a" src="../assets/g1-1.webp" alt="planta">
+      <img class="gallery1-item item-b" src="../assets/g1-2.webp" alt="planta">
+      <img class="gallery1-item item-c" src="../assets/g1-3.webp" alt="planta">
+      <div class="gallery1-item item-d text-container">
+        <p>Una de las zonas con <b>mayor crecimiento</b> de</p>
+        <h2>la Riviera Maya</h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div id="cita-virtual-container">
+      <div class="function-box">
+        <p>Agenda tu <b class="negritas">cita virtual</b></p>
+        <p>y accede a tu <b class="negritas">bono exclusivo</b></p>
+        <a id="agendar-button2" class="agendar-button" href="#">¡Agenda y obtén tu oferta!</a>
+      </div>
+    </div>
+  </section>
+  <section id="beneficios">
+    <div class="title-container">Beneficios&nbsp;de&nbsp;invertir en&nbsp;Aldea&nbsp;Umm</div>
+    <div class="items-container">
+      <div class="item" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000"><img class="pop item-a"
+          src="../assets/pop-1.png" alt="pop image1"></div>
+      <div class="division-line" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000"></div>
+      <div class="item" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"><img class="pop item-a"
+          src="../assets/pop-2.png" alt="pop image2"></div>
+      <div class="division-line" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"></div>
+      <div class="item" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000"><img class="pop item-a"
+          src="../assets/pop-3.png" alt="pop image3"></div>
+      <div class="division-line" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000"></div>
+      <div class="item" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000"><img class="pop item-a"
+          src="../assets/pop-4.png" alt="pop image4"></div>
+    </div>
+  </section>
+  <section id="lotes">
+    <div id="lotes-disponibles">
+      <h2 class="title">Lotes Disponibles</h2>
+      <div class="text-container">
+        <p>Superficies desde 160 m²</p>
+        <div class="division-line"></div>
+        <p>Listos para <b>escriturar</b></p>
+        <div class="division-line"></div>
+        <p><b>Infraestructura</b>: calles blancas, electrificación, drenaje, acceso controlado</p>
+        <div class="division-line"></div>
+        <p>Opciones con <b>ubicación premium</b> dentro del&nbsp;desarrollo</p>
+      </div>
+      <div class="button-container">
+        <p>DISPONIBILIDAD LIMITADA</p>
+        <a id="agendar-button3" class="agendar-button"><img src="/assets/descarga.svg" alt="descarga"
+            style="width: 50px; height: 45px;">
+          <p>BROCHURE</p>
+        </a>
+      </div>
+      <div class="images-container-mobile">
+        <img id="lote-image1" src="/assets/lotes-1.jpg" alt="lotes-1">
+        <img id="lote-image2" src="/assets/lotes-2.jpg" alt="lotes-1">
+      </div>
+    </div>
+    <div id="lotes-image">
+      <img id="lote-image3" src="/assets/lotes-2.jpg" alt="lotes-1">
+    </div>
+    <div id="lotes-center-image"><img id="lote-image4" src="/assets/lotes-1.jpg" alt="lotes-1"></div>
+  </section>
+  <section id="first-subtitle-wrapper" style="padding-top: 1rem; padding-bottom: 1rem;">
+    <div id="first-subtitle">
+      <div class="text-container">
+        <p>Espacios diseñados para la</p>
+        <p>tranquilidad, el equilibrio y la conexión</p>
+      </div>
+    </div>
+  </section>
+  <section id="amenidades" style="position: relative;">
+    <div class="swiper" id="amenidades">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="feature" style="background-image: url('../assets/amenidades5.webp')">
+            <div class="feature-content">
+              <p>ALBERCA </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="feature" style="background-image: url('../assets/amenidades2.webp')">
+            <div class="feature-content">
+              <p>PARQUE DE MASCOTAS </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="feature" style="background-image: url('../assets/amenidades3.webp')">
+            <div class="feature-content">
+              <p>ÁREA DE NIÑOS </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="feature" style="background-image: url('../assets/amenidades4.webp')">
+            <div class="feature-content">
+              <p>ZONA ZEN Y MEDITACIÓN </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="feature" style="background-image: url('../assets/amenidades1.webp')">
+            <div class="feature-content">
+              <p>CANCHA DE TENIS </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="features-container">
+      <div class="feature" data-label="ALBERCA">
+        <div class="feature-content">ALBERCA</div>
+        <div class="feature-content2">
+          <p>ALBERCA</p><img src="/assets/flecha.svg" alt="arrow">
+        </div>
+      </div>
+      <div class="feature" data-label="PARQUE DE MASCOTAS">
+        <div class="feature-content">PARQUE DE MASCOTAS</div>
+        <div class="feature-content2">
+          <p>PARQUE DE MASCOTAS</p><img src="/assets/flecha.svg" alt="arrow">
+        </div>
+      </div>
+      <div class="feature" data-label="ÁREA DE NIÑOS">
+        <div class="feature-content">ÁREA DE NIÑOS</div>
+        <div class="feature-content2">
+          <p>ÁREA DE NIÑOS</p><img src="/assets/flecha.svg" alt="arrow">
+        </div>
+      </div>
+      <div class="feature" data-label="ZONA ZEN Y MEDITACIÓN">
+        <div class="feature-content">ZONA ZEN Y MEDITACIÓN</div>
+        <div class="feature-content2">
+          <p>ZONA ZEN Y MEDITACIÓN</p><img src="/assets/flecha.svg" alt="arrow">
+        </div>
+      </div>
+      <div class="feature" data-label="CANCHA DE TENIS">
+        <div class="feature-content">CANCHA DE TENIS</div>
+        <div class="feature-content2">
+          <p>CANCHA DE TENIS</p><img src="/assets/flecha.svg" alt="arrow">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="inversion">
+    <div id="gallery2">
+      <div class="row row-top">
+        <img src="../assets/g2-1.webp" alt="inversion-1">
+        <img src="../assets/g2-2.webp" alt="inversion-2">
+        <img src="../assets/g2-3.webp" alt="inversion-3">
+      </div>
+      <div class="row row-bottom">
+        <img src="../assets/g2-4.webp" alt="inversion-4">
+        <img src="../assets/g2-5.jpeg" alt="inversion-5">
+      </div>
+    </div>
+    <div id="inversion-disponible">
+      <div class="text-container">
+        <h2 class="title">
+          <p>¿Por qué elegir</p>
+          <p><span class="color-title">Aldea Umm</span> como</p>
+          <p>inversión?</p>
+        </h2>
+        <p class="text-dorado">Ubicado en <b>Puerto Morelos</b>, entre Cancún y Playa del Carmen</p>
+        <div class="division-line"></div>
+        <p class="text-dorado">Plusvalía proyectada por infraestructura y <b>demanda creciente</b></p>
+        <div class="division-line"></div>
+        <p class="text-dorado">Desarrollo entregado, con <b>certeza jurídica</b> y <b>servicios instalados</b> </p>
+        <div class="division-line"></div>
+        <p class="text-dorado">Baja densidad, <b>alto valor ecológico</b></p>
+      </div>
+    </div>
+
+  </section>
+  <section id="map">
+    <div class="map-container"></div>
+    <div class="text-container">
+      <h2 class="first-text">¡INVIERTE HOY</h2>
+      <p class="second-text">en un lote con <span><br>escritura inmediata!</span></p>
+      <p class="third-text"><span id="desde">desde</span><span id="dinero">$1.1</span><span id="moneda">MDP</span></p>
+      <span class="fourth-text">
+        <p>Bonos exclusivos por cita virtual agendada.</p>
+        <p>Planes de pago personalizado y sin intereses.</p>
+      </span>
+    </div>
+  </section>
+  <section id="footer">
+    <div class="logos-container">
+      <img src="../assets/aldea-umm-logo.png" alt="logo aldea">
+      <img src="../assets/logo-ITM.png" alt="logo ITM">
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/modal.js"></script>
+</body>
+
+<style></style>
+
+</html>

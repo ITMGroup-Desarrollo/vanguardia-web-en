@@ -1,0 +1,98 @@
+#discover-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+}
+#discover-section .discover-text-container{
+    width: 100%;
+    text-align: left;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    
+}
+#discover-section .discover-text-container h2{
+    font-size: 1.8rem;
+    
+}
+#discover-section .discover-text-container b{
+    font-size: 2.3rem;
+}
+#discover-section .discover-text-container p{
+    margin: 0;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+#discover-section .discover-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#discover-section .discover-list-container .list-item{
+    background-color: #f2f2f2;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 1rem 0 0; 
+}
+
+#discover-section .discover-list-container .list-item img{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    margin: 1rem;
+}
+#tennis-section{
+    width: 100%;
+    height: fit-content;
+}
+#tennis-section img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+@media screen and (min-width: 769px) {
+    #discover-section{
+        flex-direction: row;
+        background-position: left;
+        background-size: cover;
+    }
+    #discover-section .discover-list-container{
+        width: 50%;
+        max-width: 50%;
+    }
+    #discover-section .discover-list-container .list-item{
+        width: 100%;
+        padding: 1rem;
+        height: 10rem;
+        font-size: 1.5rem;
+        }
+    #discover-section .discover-list-container .list-item img{
+        width: 10rem;
+        height: 100%;
+        margin: 0 1rem 0 0;
+    }
+    #discover-section .discover-text-container{
+        width: 50%;
+        max-width: 50%;
+        align-self: flex-start;
+    }
+    #discover-section .discover-text-container h2{
+        font-size: 2.5rem;
+        width: fit-content;
+        width: 80%;
+        
+    }
+    #discover-section .discover-text-container b{
+        font-size: 3rem;
+    }
+    #discover-section .discover-text-container p{
+        font-size: 1.8rem;
+        width: 80%;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,58 @@
+#brochure-section{
+    background-size: cover;
+    background-position: center;
+}
+#brochure-section .overlay {
+    background-color: rgba(23, 59, 82, 0.8);
+    width: 100%;
+    height: 100%;
+    padding-bottom: 4rem;
+}
+#brochure-section h2{
+    padding: 4rem 0 2rem;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+#brochure-section .overlay > p{
+    padding-bottom: 4rem;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 100;
+    background-size: cover;
+    background-position: center;
+}
+#brochure-section .overlay  b{
+    
+    font-weight: 700;
+}
+#brochure-section button {
+    
+    margin: auto;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#brochure-section button img {
+    padding-left: 0.5rem;
+    height: 2.5rem;
+    width: auto;
+}
+
+#brochure-section button p {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}

@@ -1,0 +1,55 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: rgba(23, 59, 82);
+  --overlay-color: rgba(23, 59, 82, 0.8);
+  --secondary-color: rgba(25, 152, 169);
+  --green-color: rgba(28, 175, 73);
+  --text-color: #ffffff;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('../assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../assets/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Abhaya';
+  src: url('../assets/fonts/AbhayaLibre-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Abhaya-bold';
+  src: url('../assets/fonts/AbhayaLibre-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  /* rango de pesos incluidos */
+  font-style: normal;
+}
+
+p,
+span,
+h2,
+a,
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+h1 {        
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}

@@ -1,0 +1,69 @@
+#appointment-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+}
+
+#appointment-section .overlay {
+    display: flex;
+    background-color: rgba(23, 59, 82, 0.8);
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+}
+
+#appointment-section .text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    height: 100%;
+    padding: 1rem 3rem 3rem;
+}
+
+#appointment-section .text-container h2 {
+    align-self: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#appointment-section .text-container p {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#appointment-section .text-container p b {
+    font-weight: 900;
+}
+
+#appointment-section .text-container button {
+    font-weight: 900;
+    padding: .5rem;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.8rem;
+}
+#appointment-text{
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+}
+@media screen and (min-width: 769px) {
+    #appointment-section .overlay {
+        width: 50%;
+    }
+
+    #appointment-section .text-container {
+        padding: 4rem;
+        margin: 0 3.5rem 2rem;
+    }
+}

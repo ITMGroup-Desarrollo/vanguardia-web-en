@@ -1,0 +1,87 @@
+#amenities-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    align-items: center;
+    position: relative;
+}
+#amenities-section .title-container{
+    padding: 4rem 4rem 1rem;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+#amenities-section .title-container h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+#amenities-section .text-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 10% 4rem 10%;
+    align-self: flex-start;
+    text-align: left;
+    margin: 0;
+}
+#amenities-section .swiper{
+    margin: 0 auto 2rem;
+}
+#amenities-section .swiper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#amenities-section .text-container p{
+    font-size: 1.5rem;
+    margin: 0;
+}
+#amenities-section .swiper-button-next{
+    display: none;
+}
+#amenities-section .swiper-button-prev{
+    display: none;
+}
+#amenities-section .swiper-button-next img, #amenities-section .swiper-button-prev img{
+    width: 3rem;
+}
+@media screen and (min-width: 769px) {
+    #amenities-section .swiper-button-next{
+    display: block;
+    color: transparent;
+    left: 85%;
+    top: 85%;
+}
+#amenities-section .swiper-button-prev{
+    display: block;
+    color: transparent;
+    left: 78%;
+    top: 85%;
+}
+#amenities-section .text-container{
+    padding: 0 0 4rem 10%;
+    align-self: flex-start;
+    width: 65%;
+    text-align: left;
+    margin: 0;
+}
+}
+@media screen and (min-width: 1100px) {
+    #amenities-section .swiper-button-next{
+    display: block;
+    color: transparent;
+    left: 86%;
+    top: 85%;
+}
+#amenities-section .swiper-button-prev{
+    display: block;
+    color: transparent;
+    left: 80%;
+    top: 85%;
+}
+}
