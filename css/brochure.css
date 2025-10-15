@@ -1,39 +1,45 @@
-#brochure-section{
+#brochure-section {
     background-size: cover;
     background-position: center;
 }
+
 #brochure-section .overlay {
     background-color: rgba(23, 59, 82, 0.8);
     width: 100%;
     height: 100%;
     padding-bottom: 4rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
-#brochure-section h2{
+
+#brochure-section h2 {
     padding: 4rem 0 2rem;
     margin: auto;
-    width: 60%;
-    text-align: center;
+    width: 80%;
+    text-align: justify;
     color: white;
     font-size: 3rem;
 }
-#brochure-section .overlay > p{
+
+#brochure-section .overlay>p {
     padding-bottom: 4rem;
     margin: auto;
     width: 80%;
-    text-align: center;
+    text-align: justify;
     color: white;
     font-size: 1.8rem;
     font-weight: 100;
     background-size: cover;
     background-position: center;
 }
-#brochure-section .overlay  b{
-    
+
+#brochure-section .overlay b {
+
     font-weight: 700;
 }
+
 #brochure-section button {
-    
-    margin: auto;
+
+    margin: 0 3rem;
     display: flex;
     padding: 0.5rem 0.5rem;
     background-color: var(--green-color);
@@ -55,4 +61,39 @@
     padding: 0 1rem;
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (min-width: 769px) {
+    #brochure-section .overlay>p {
+        padding-bottom: 4rem;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 100;
+        background-size: cover;
+        background-position: center;
+    }
+    #brochure-section h2 {
+    padding: 4rem 0 2rem;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+#brochure-section button {
+
+    margin: auto;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
 }

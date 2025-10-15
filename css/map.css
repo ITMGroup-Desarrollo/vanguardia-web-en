@@ -1,0 +1,88 @@
+#map-section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: min-content;
+}
+#map-section .map-container{
+    width: 100%;
+    background-color: var(--primary-color);
+}
+#map-section .image-container{
+    height: 20rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#map-section .map-container-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#map-section .chica-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+#map-section .map-container-image{
+    height: min-content;
+    width: 90%;
+    justify-self: center;
+    margin: 0;
+    border: 2px solid white;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+#map-section .map-container p{
+    text-align: center;
+    color: white;
+    padding: 2rem 2rem 1rem;
+    font-size: 2rem;
+    margin: 0;
+}
+@media screen and (min-width: 769px) {
+    #map-section{
+        flex-direction: row;
+    }
+    #map-section .chica-container{
+    position: absolute;
+    height: 80%;
+    right: 20%;
+    bottom: 0;
+}
+    #map-section .chica-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+#map-section .map-container{
+    width: 70%;
+}
+#map-section .image-container{
+    width: 30%;
+}
+#map-section .image-container{
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+#map-section .map-container-image{
+    height: min-content;
+    margin: 2rem 5rem 3rem ;
+    margin-right: 7rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+}
+
+#map-section .map-container p{
+    text-align: center;
+    color: white;
+    padding: 2rem 4rem 1rem;
+    font-size: 3rem;
+    margin: 0;
+}
+}

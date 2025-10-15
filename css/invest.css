@@ -17,6 +17,7 @@
 #invest-section .items-container p{
  font-size: 1.5rem;
  margin: 0;
+ text-align: justify;
  padding: 1rem 4rem 0;
 }
 #invest-section .items-container h2{
@@ -27,13 +28,13 @@
  color: var(--primary-color);
  margin: 0; 
  font-weight: 700;
- font-size: 2.8rem;
+ font-size: 2.2rem;
 }
 #invest-section .items-container h2 p:nth-child(2){
-    padding: 0;
+    padding: 0 0 0 4rem;
  color: var(--secondary-color);
  margin: 0;
- font-size: 4rem;
+ font-size: 3.1rem;
  font-weight: 900;
 }
 #invest-section .porcentages-container{
@@ -74,12 +75,12 @@ width: fit-content;
 #invest-section .image-container {
     align-content: end;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0;
 }
 #invest-section .image-container p{
     color: white;
     font-size: 2.5rem;
-     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 @media screen and (min-width: 769px) {
     #invest-section {
@@ -89,11 +90,17 @@ width: fit-content;
     #invest-section .items-container{
     order: 1;
     width: 50%;
+    max-width: 50%;
 }
 #invest-section .image-container{
     order: 2;
     background-size: cover;
     width: 50%;
+    max-width: 50%;
+}
+#invest-section .image-container p{
+    width: 90%;
+    justify-self: center;
 }
 #invest-section .items-container > p {
     padding: 0 16%;

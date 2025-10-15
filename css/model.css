@@ -1,16 +1,16 @@
-.model-container {
+#model-section .model-container {
     display: flex;
     color: var(--primary-color);
     flex-direction: column;
     justify-content: center;
 }
 
-.models {
+#model-section .models {
     display: flex;
     gap: 1rem;
 }
 
-.items-container h2 {
+#model-section .items-container h2 {
     text-align: center;
     margin-top: 2rem;
     color: var(--secondary-color);
@@ -18,18 +18,20 @@
     font-weight: 700;
 }
 
-.items-container h2 {
+#model-section .items-container h2 {
     color: var(--secondary-color);
     font-size: 3rem;
     font-weight: 700;
+    text-align: justify;
 }
 
-.items-container>p {
+#model-section .items-container>p {
     font-size: 1.6rem;
     font-weight: 100;
+    text-align: justify;
 }
 
-.model-change {
+#model-section .model-change {
     font-size: 1.6rem;
     font-weight: 100;
 }
@@ -39,24 +41,24 @@
     cursor: pointer;
 }
 
-.model-change p.active {
+#model-section .model-change p.active {
     font-weight: bold;
 }
 
-.image-container {
+#model-section .image-container {
     order: 2;
     width: 100%;
     justify-content: center;
 }
 
-.items-container {
+#model-section .items-container {
     order: 1;
     width: 80%;
     text-align: center;
     align-self: center;
 }
 
-.image-container img {
+#model-section .image-container img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -82,37 +84,37 @@
 }
 
 @media screen and (min-width: 769px) {
-    .model-change {
+    #model-section .model-change {
     padding: 0 2rem 0 0;
     font-size: 1.6rem;
     font-weight: 100;
 }
-.items-container>p {
+#model-section .items-container>p {
     padding: 0 2rem 0 0;
     font-size: 1.6rem;
     font-weight: 100;
 }
-    .items-container  {
+    #model-section .items-container  {
     text-align: start;
 }
-    .items-container h2 {
+    #model-section .items-container h2 {
     text-align: start;
 }
     #model-section .description-container p {
         margin: 0 0 2rem;
     }
 
-    .image-container {
+    #model-section .image-container {
         width: 60%;
         order: 1;
     }
 
-    .items-container {
+    #model-section .items-container {
         width: 40%;
         order: 2;
     }
 
-    .model-container {
+    #model-section .model-container {
         flex-direction: row;
     }
 }
