@@ -10,6 +10,12 @@
     margin-bottom: 0;
     font-size: 3rem;
     font-weight: 700;
+    padding: 0 10%;
+}
+
+#video .title-container p{
+    font-size: 1.5rem;
+    padding: 0 10%;
 }
 
 #video .video-container{
@@ -33,4 +39,9 @@
     #v-horizontal {
         display: block;
     }
+    #video .title-container p{
+    font-size: 1.5rem;
+    padding: 0 10%;
+}
+    
 }
