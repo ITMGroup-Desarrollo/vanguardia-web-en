@@ -50,6 +50,7 @@
     #map-section .chica-container{
     position: absolute;
     height: 80%;
+    max-height: 800px;
     right: 20%;
     bottom: 0;
 }

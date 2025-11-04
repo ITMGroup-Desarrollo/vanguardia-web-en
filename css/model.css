@@ -48,6 +48,8 @@
 #model-section .image-container {
     order: 2;
     width: 100%;
+    
+    max-height: 100vh;
     justify-content: center;
 }
 
@@ -59,8 +61,9 @@
 }
 
 #model-section .image-container img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 80vh;
+    max-height: 100vh;
     object-fit: cover;
 }
 
@@ -106,6 +109,8 @@
 
     #model-section .image-container {
         width: 60%;
+        padding-left: 4rem;
+        align-items: center;
         order: 1;
     }
 
