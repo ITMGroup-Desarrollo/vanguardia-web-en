@@ -83,6 +83,7 @@
     color: white;
     background-size: cover;
     background-position: left;
+    min-height: 65vh;
 }
     #tennis-section .text-container {
         width: 60%;
@@ -102,6 +103,7 @@
         flex-direction: row;
         background-position: left;
         background-size: cover;
+        max-height: 80vh;
     }
 
     #discover-section .discover-list-container {

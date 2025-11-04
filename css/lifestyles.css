@@ -87,6 +87,7 @@
     display: flex;
     background-color: #f2f2f2;
     flex-direction: row;
+    max-height: 100vh;
 }
 .lifestyle-image-container{
     width: 50%;
