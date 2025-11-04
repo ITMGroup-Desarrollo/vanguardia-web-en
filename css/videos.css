@@ -23,16 +23,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 #video .video-container video {
-    width: auto;
-    height: 90vh;
+    width: 80vw;
+    height: auto;
 }
 #v-horizontal {
         display: none;
     }
 @media (min-width: 768px) {
+    #video .video-container video {
+    width: auto;
+    height: 90vh;
+}
     #v-vertical {
         display: none;
     }

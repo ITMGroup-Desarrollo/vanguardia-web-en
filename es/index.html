@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanguardia Residences</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/modal.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/appoint.css" />
+  <link rel="stylesheet" href="../css/lifestyles.css" />
+  <link rel="stylesheet" href="../css/discover.css" />
+  <link rel="stylesheet" href="../css/amenities.css" />
+  <link rel="stylesheet" href="../css/model.css" />
+  <link rel="stylesheet" href="../css/brochure.css" />
+  <link rel="stylesheet" href="../css/invest.css" />
+  <link rel="stylesheet" href="../css/reef.css" />
+  <link rel="stylesheet" href="../css/map.css" />
+  <link rel="stylesheet" href="../css/map.css" />
+  <link rel="stylesheet" href="../css/videos.css" />
+  <link rel="stylesheet" href="../css/videos.css" />
+  <link rel="stylesheet" href="../css/fase.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <style>
+    .swiper {
+      width: 80%;
+      height: 30rem;
+      margin: 0 auto 4rem;
+    }
+
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+      margin: 50px auto;
+    }
+
+    .swiper-slide {
+      height: 100%;
+      background: #007bff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="formModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <!-- Paso 1: Formulario -->
+      <div class="step step-1">
+        <h2>AGENDA UNA CITA</h2>
+        <form id="Registro-Aldea-Umm">
+          <div class="form-row">
+            <input type="text" name="firstname" placeholder="Nombre" required>
+            <input type="text" name="lastname" placeholder="Apellido" required>
+          </div>
+          <div class="form-row">
+            <div class="country-code" style="display: flex; gap: 0.5rem;">
+              <select id="countryCode" name="countryCode" required>
+                <option value="+1">US +1</option>
+                <option value="+52">MX +52</option>
+                <option value="+34">ES +34</option>
+                <option value="+44">GB +44</option>
+                <option value="+57">CO +57</option>
+                <option value="+54">AR +54</option>
+              </select>
+              <input type="tel" name="phone" placeholder="1234567890" required>
+            </div>
+            <input type="email" name="email" placeholder="Correo Electronico" required>
+          </div>
+          <button type="submit">Siguiente</button>
+        </form>
+      </div>
+
+      <!-- Paso 2: Encuesta intro -->
+      <div class="step step-2 hidden">
+        <h2 id="surveyIntro"></h2>
+        <button id="toStep3">Siguiente</button>
+      </div>
+
+      <!-- Paso 3: Pregunta de contacto -->
+      <div class="step step-3 hidden">
+        <h2 id="motivoQuestion"></h2>
+        <div class="answers-container">
+          <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Vivirlo y disfrutarlo (uso
+            propio)</label>
+          <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y
+            generar plusvalía o rentas (inversión)</label>
+          <label><input type="radio" name="motivo" value="Soy asesor o broker (buscando opciones para mis clientes)">Soy
+            asesor o broker (buscando opciones para mis clientes)</label>
+        </div>
+        <div class="forms-button-container">
+          <button class="back-button" data-back-step="2">Atrás</button>
+          <button id="toStep4">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Paso 4: Pregunta de inversión -->
+      <div class="step step-4 hidden">
+        <h2>¿Qué tan pronto te gustaría invertir en tu nuevo lote residencial?</h2>
+        <div class="answers-container">
+          <label><input type="radio" name="invertir" value="De inmediato">De inmediato</label>
+          <label><input type="radio" name="invertir" value="En los próximos meses">En los próximos meses</label>
+          <label><input type="radio" name="invertir" value="A largo plazo">A largo plazo</label>
+        </div>
+        <div class="forms-button-container">
+          <button class="back-button" data-back-step="3">Atrás</button>
+          <button id="toStep5">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Paso 5: Pregunta de precio -->
+      <div class="step step-5 hidden">
+        <h2>¿Estás consciente de que nuestros lotes residenciales comienzan en $1,100,000 MXN?</h2>
+        <div class="answers-container">
+          <label><input type="radio" name="precio" value="Si">Sí</label>
+          <label><input type="radio" name="precio" value="No">No</label>
+        </div>
+        <div class="forms-button-container">
+          <button class="back-button" data-back-step="4">Atrás</button>
+          <button id="toStep6">Siguiente</button> <!-- Ahora va directo al calendario -->
+        </div>
+      </div>
+
+      <!-- Paso 6: Calendario -->
+      <div class="step step-6 hidden">
+        <h2>Selecciona tu cita</h2>
+        <div id="calendarContainer"></div>
+      </div>
+
+    </div>
+  </div>
+  <header id="header-container" style="background-image: url('../assets/fondo-header.webp');">
+    <img src="../assets/vanguardia-logo-blanco.png" alt="Vanguardia Residences Logo">
+  </header>
+  <section id="header-text">
+    <h2><b style="padding-right: 0.5rem;">APARTMENTS</b>STARTING FROM <span>$150,000 USD</span> PLUS BANK FINANCING
+      AVAILABLE</h2>
+  </section>
+  <section id="appointment-section" style="background-image: url('../assets/render.webp');">
+    <div class="overlay">
+      <div class="text-container">
+        <h2>Puerto <b>Morelos</b></h2>
+        <p>reveals its best-kept secret
+          <b>Stunning modern apartments</b>
+          with guaranteed capital gain
+          and <b>flexible payment plans</b>
+        </p>
+        <button type="button">BOOK YOUR VIRTUAL APPOINTMENT AND UNLOCK YOUR EXCLUSIVE BONUS</button>
+      </div>
+    </div>
+  </section>
+  <section id="appointment-text">
+    <h2><b style="padding-right: 0.5rem;">INVEST</b>IN ONE OF THE TOP DEVELOPMENTS IN <b>PUERTO&nbsp;MORELOS </b></h2>
+  </section>
+  <section id="lifestyle-section">
+    <div class="lifestyle-image-container">
+      <img src="../assets/lifestyle.webp" alt="lifestyle-section-image">
+    </div>
+    <div class="lifestyle-text-container">
+      <div class="title-container">
+        <p>A NEW</p>
+        <h2>LIFESTYLE</h2>
+        <p>AWAITS</p>
+      </div>
+      <div class="list-container">
+        <ul>
+          <li><img src="../assets/icon-palomita.png" alt="check">
+            <p>An extraordinary life is calling</p>
+          </li>
+          <li><img src="../assets/icon-palomita.png" alt="check">
+            <p>Puerto Morelos is the best-kept secret of the Riviera Maya</p>
+          </li>
+          <li><img src="../assets/icon-palomita.png" alt="check">
+            <p>Peaceful, authentic, and surrounded by nature just minutes from Cancún</p>
+          </li>
+          <li><img src="../assets/icon-palomita.png" alt="check">
+            <p>Only 10 minutes from iconic Caribbean beaches</p>
+          </li>
+          <li><img src="../assets/icon-palomita.png" alt="check">
+            <p>Relaxed atmosphere, perfect for living or short-term rentals</p>
+          </li>
+          <li><img src="../assets/icon-palomita.png" alt="check">
+            <p>Vibrant local and international cuisine scene</p>
+          </li>
+        </ul>
+        <button type="button">BOOK YOUR VIRTUAL APPOINTMENT AND UNLOCK YOUR EXCLUSIVE BONUS</button>
+      </div>
+    </div>
+  </section>
+  <section id="discover-section" style="background-image: url('../assets/discover.png');">
+    <div class="discover-text-container">
+      <h2>Discover the development <br> <b>that’s transforming Puerto&nbsp;Morelos</b></h2>
+      <p>Nature, innovation, and lifestyle come together to create a truly unique living experience</p>
+    </div>
+    <div class="discover-list-container">
+      <div class="list-item"><img src="../assets/discover1.webp" alt="preview image">
+        <p>Over <b>60%</b> of the space dedicated to <b>green areas</b></p>
+      </div>
+      <div class="list-item"><img src="../assets/discover2.webp" alt="preview image">
+        <p>More than <b>25 thoughtfully</b> designed <b>amenities</b> to enhance daily life</p>
+      </div>
+      <div class="list-item"><img src="../assets/discover3.webp" alt="preview image">
+        <p>The first residential project in the area with <b>elevators</b></p>
+      </div>
+    </div>
+  </section>
+  <section id="tennis-section" style="background-image: url('../assets/fondo-tennis.jpg');">
+    <div class="text-container">
+      <h2>A community designed for you in the New Puerto Morelos</h2>
+      <p>Live in a growing destination that blends <b>nature, comfort, and a modern design.</b></p>
+      <p><b>Vanguardia</b> is not just a development it is a <b>planned community</b> where wellness, investment and connection thrive</p>
+    </div>
+  </section>
+  <section id="amenities-section">
+    <div class="title-container">
+      <h2>More than 25 amenities to live, relax and enjoy every day</h2>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../assets/gallery/1.webp" alt="gallery image 1"></div>
+        <div class="swiper-slide"><img src="../assets/gallery/2.webp" alt="gallery image 2"></div>
+        <div class="swiper-slide"><img src="../assets/gallery/3.webp" alt="gallery image 3"></div>
+        <div class="swiper-slide"><img src="../assets/gallery/4.webp" alt="gallery image 4"></div>
+        <div class="swiper-slide"><img src="../assets/gallery/5.webp" alt="gallery image 5"></div>
+      </div>
+    </div>
+    <!-- Botones -->
+    <div class="swiper-button-prev"><img src="../assets/IZQUIERDA.png" alt="arrow"></div>
+    <div class="swiper-button-next"><img src="../assets/DERECHA.png" alt="arrow"></div>
+    <div class="text-container">
+      <p>From wellness and fitness to entertainment and family spaces everything you need is here without ever leaving
+        home</p>
+      <p>Designed to elevate your lifestyle one day at a time</p>
+    </div>
+  </section>
+  <section id="model-section">
+    <div class="model-container">
+      <div class="image-container"><img src="../assets/modelo-1.png" alt="model"></div>
+      <div class="items-container">
+        <h2>Reserve your apartment today</h2>
+        <p>Functional, modern spaces designed to match your lifestyle whether you are looking to live, vacation, or
+          invest</p>
+        <div class="model-change">
+          <div class="models">
+            <p id="model-1" class="active">Tower A Model 1</p>
+            <p>/</p>
+            <p id="model-2">Tower A Model 2</p>
+          </div>
+          <div id="model-1-items">
+            <p>81.19 square meters interior <br>6.19 square meters terrace <br>CTA: I’m interested in this model</p>
+            <button>I’M INTERESTED IN THIS MODEL</button>
+          </div>
+          <div id="model-2-items">
+            <p>110.33 square meters interior <br>0.96 square meters terrace <br>CTA: I’m interested in this model</p>
+            <button>I’M INTERESTED IN THIS MODEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <di class="description-container">
+      <p>Reserve your apartment with just fifty thousand pesos MXN</p>
+    </di>
+  </section>
+  <section id="brochure-section" style="background-image: url('../assets/fondo-brochure.webp');">
+    <div class="overlay">
+      <h2>Get to know every detail of your <b>new home</b> in the caribbean</h2>
+      <p>reveals its best-kept secret <b>stunning modern apartments</b> with guaranteed capital gain and <b>flexible
+          payment plans</b></p>
+      <button><img src="../assets/download-white.png" alt="descarga">
+        <p>DOWNLOAD OUR FREE BROCHURE</p>
+      </button>
+    </div>
+  </section>
+  <section id="invest-section">
+    <div class="items-container">
+      <h2>
+        <p>INVEST AT YOUR</p>
+        <P>OWN PACE</P>
+      </h2>
+      <P>We offer flexible payment plans tailored to your needs</P>
+      <P>Reserve with just <b>$2,650 USD</b> and access these options</P>
+      <div class="porcentages-container">
+        <div class="item">
+          <p class="porcentage">10%</p>
+          <p class="porcentage-text">at contract signing</p>
+        </div>
+        <span></span>
+        <div class="item">
+          <p class="porcentage">10%</p>
+          <p class="porcentage-text">in monthly installments</p>
+        </div>
+        <span></span>
+        <div class="item">
+          <p class="porcentage">10%</p>
+          <p class="porcentage-text">upon deed signing</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-container" style="background-image: url('../assets/anuncio.jpg');">
+      <p>We accept <b>bank mortgages</b> and <b>direct financing</b></p>
+    </div>
+  </section>
+  <section id="reef-section">
+    <div class="image-container"><img src="../assets/reef-1.webp" alt="reef-1"><img src="../assets/reef-2.jpg" alt="reef-2">
+    </div>
+    <div class="text-container">
+      <p><b>Just 10 minutes</b> from the second largest reef system on earth</p>
+      <p>Live steps away from one of the world’s most breathtaking natural wonders the Mesoamerican Reef</p>
+      <p>Perfect for nature lovers, divers, and investors seeking unmatched location value</p>
+
+    </div>
+  </section>
+  <section id="map-section">
+    <div class="map-container">
+      <p>A strategic location between <b>Cancun</b> and <b>Playa del Carmen</b></p>
+      <div class="map-container-image">
+        <img src="../assets/Mapa.png" alt="mapa">
+      </div>
+    </div>
+    <div class="image-container" style="background-image: url('../assets/map-render.jpg');">
+    </div>
+    <div class="chica-container"><img src="../assets/chica.png" alt="chica"></div>
+  </section>
+  <section id="video">
+    <div class="title-container">
+      <h2>Watch your future home come to&nbsp;life</h2>
+      <p>See how your next investment is taking&nbsp;shape</p>
+      <p>Click play and witness the progress of this exclusive&nbsp;development</p>
+    </div>
+    <div class="video-container">
+      <video id="v-vertical" src="../assets/videos/video-vertical.mp4" controls></video>
+      <video id="v-horizontal" src="../assets/videos/video-horizontal.mp4" controls></video>
+    </div>
+  </section>
+  <section id="fase">
+    <div class="part1">
+      <p>Puerto Morelos is not just a destination it is a way of life</p>
+      <p>Once you experience it, you will want to stay</p>
+      <p>Invest where authenticity, nature, and growth come together</p>
+      <img src="../assets/pack.png" alt="family image">
+    </div>
+    <div class="part2">
+      <p>Phase 1 <br>apartments starting at $150,000 USD</p>
+      <p>Shcedule a virtual appointment with one of out experts and receive a bonus up to 100,000 pesos MXN wwhen you
+        invest in your new apartment</p>
+      <p>Offer valid for seven days</p>
+      <button>
+        <p>SCHEDULE YOUR VIRTUAL APPOINTMENT AND CLAIM YOUR EXCLUSIVE BONUS</p>
+      </button>
+    </div>
+    <div></div>
+  </section>
+  <section id="footer">
+    <div class="logos-container">
+      <img src="../assets/vanguardia-logo.png" alt="logo vanguardia">
+      <img src="../assets/itm-logo.png" alt="logo ITM">
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/modal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const model1 = document.getElementById('model-1');
+      const model2 = document.getElementById('model-2');
+      const model1Items = document.getElementById('model-1-items');
+      const model2Items = document.getElementById('model-2-items');
+      const image = document.querySelector('.image-container img');
+
+      // Estado inicial
+      model1Items.style.display = 'block';
+      model2Items.style.display = 'none';
+      image.src = '../assets/modelo-1.png';
+
+      // Click en Model 1
+      model1.addEventListener('click', function () {
+        model1Items.style.display = 'block';
+        model2Items.style.display = 'none';
+        model1.classList.add('active');
+        model2.classList.remove('active');
+        image.src = '../assets/modelo-1.png';
+      });
+
+      // Click en Model 2
+      model2.addEventListener('click', function () {
+        model1Items.style.display = 'none';
+        model2Items.style.display = 'block';
+        model2.classList.add('active');
+        model1.classList.remove('active');
+        image.src = '../assets/modelo-2.png';
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

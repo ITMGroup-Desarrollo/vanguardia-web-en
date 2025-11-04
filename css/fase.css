@@ -1,0 +1,76 @@
+#fase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white; 
+    text-align: justify;
+}
+#fase .part1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+#fase .part2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding-bottom: 4rem;
+}
+#fase .part1 img{
+    width: 100%;
+    height: auto;
+}
+#fase p{
+    width: 80%;
+    margin: 0.5rem 0;
+}
+#fase p:first-child{
+    font-size:3rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+#fase p:last-child{
+    padding-bottom: 2rem;
+}
+#fase button {
+    margin: 1.5rem 3rem 0;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#fase .part2 button p {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
+  #fase {
+    flex-direction: row;
+    align-items: stretch; 
+  }
+  #fase .part1,
+  #fase .part2 {
+    align-self: stretch; 
+    height: auto; 
+    padding: 0;
+    justify-content: flex-start;
+  }
+}
+
+}
