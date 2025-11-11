@@ -5,6 +5,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vanguardia Residences</title>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MW928JC4');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2057644714647728');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css" />
@@ -51,14 +78,21 @@
       position: absolute;
       display: flex;
     }
-
   </style>
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW928JC4" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Meta Pixel Code -->
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2057644714647728&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <div id="formModal" class="modal hidden">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <!-- <span class="close">&times;</span> -->
 
       <!-- Paso 1: Formulario -->
       <div class="step step-1">
@@ -147,12 +181,15 @@
   <header id="header-container" style="background-image: url('../assets/fondo-header.webp');">
     <img src="../assets/vanguardia-logo-blanco.png" alt="Vanguardia Residences Logo">
     <div class="lang-container" style="right: 10px;">
-      <a href="../es/"><img src="../assets/MEX.png" alt="MEX Logo" style="margin: 0; width: 30px; padding:1rem 1rem 1rem 0;"/></a>
-      <a href="../en/"><img src="../assets/EU.png" alt="EU Logo" style="margin: 0; width: 30px; padding:1rem 1rem 1rem 0;"/></a>
+      <a href="../es/"><img src="../assets/MEX.png" alt="MEX Logo"
+          style="margin: 0; width: 30px; padding:1rem 1rem 1rem 0;" /></a>
+      <a href="../en/"><img src="../assets/EU.png" alt="EU Logo"
+          style="margin: 0; width: 30px; padding:1rem 1rem 1rem 0;" /></a>
     </div>
   </header>
   <section id="header-text">
-    <h2><b style="padding-right: 0.5rem;">DEPARTAMENTOS</b>DESDE<span>$2.9 MDP</span> + FINANCIAMIENTO BANCARIO DISPONIBLE</h2>
+    <h2><b style="padding-right: 0.5rem;">DEPARTAMENTOS</b>DESDE<span>$2.9 MDP</span> + FINANCIAMIENTO BANCARIO
+      DISPONIBLE</h2>
   </section>
   <section id="appointment-section" style="background-image: url('../assets/render.webp');">
     <div class="overlay">
@@ -161,12 +198,13 @@
         <p>Revela su mejor secreto
           <b>Departamentos modernos y sofisticados con plusvalía garantizada y <b>planes de pago flexibles</b>
         </p>
-        <button type="button">AGENDA TU CITA VIRTUAL Y OBTËN TU BONO EXCLUSIVO.</button>
+        <button id="agendar-button" type="button">AGENDA TU CITA VIRTUAL Y OBTËN TU BONO EXCLUSIVO.</button>
       </div>
     </div>
   </section>
   <section id="appointment-text">
-    <h2><b style="padding-right: 0.5rem;">INVIERTE </b>EN UNO DE LOS MEJORES DESARROLLOS EN <b>PUERTO&nbsp;MORELOS </b></h2>
+    <h2><b style="padding-right: 0.5rem;">INVIERTE </b>EN UNO DE LOS MEJORES DESARROLLOS EN <b>PUERTO&nbsp;MORELOS </b>
+    </h2>
   </section>
   <section id="lifestyle-section">
     <div class="lifestyle-image-container">
@@ -199,7 +237,7 @@
             <p>Escena gastronómica vibrante, con opciones locales e internacionales.</p>
           </li>
         </ul>
-        <button type="button">AGENDA TU CITA VIRTUAL Y RECLAMA TU BONO EXCLUSIVO.</button>
+        <button id="agendar-button2" type="button">AGENDA TU CITA VIRTUAL Y RECLAMA TU BONO EXCLUSIVO.</button>
       </div>
     </div>
   </section>
@@ -224,7 +262,8 @@
     <div class="text-container">
       <h2>Una comunidad diseñada para ti en el nuevo Puerto Morelos</h2>
       <p>Vive en un destino en crecimiento que combina <b>naturaleza, confort y diseño moderno.</b></p>
-      <p><b>Vanguardia</b> no es solo un desarrollo, es una <b>comunidad planeada</b> donde prosperan el bienestar, la inversión y la conexión</p>
+      <p><b>Vanguardia</b> no es solo un desarrollo, es una <b>comunidad planeada</b> donde prosperan el bienestar, la
+        inversión y la conexión</p>
     </div>
   </section>
   <section id="amenities-section">
@@ -244,7 +283,8 @@
     <div class="swiper-button-prev"><img src="../assets/IZQUIERDA.png" alt="arrow"></div>
     <div class="swiper-button-next"><img src="../assets/DERECHA.png" alt="arrow"></div>
     <div class="text-container">
-      <p>Desde bienestar y fitness hasta entretenimiento y espacios familiares todo lo que necesitas está aquí, sin salir de casa</p>
+      <p>Desde bienestar y fitness hasta entretenimiento y espacios familiares todo lo que necesitas está aquí, sin
+        salir de casa</p>
       <p>Diseñado para elevar tu estilo de vida día a día</p>
     </div>
   </section>
@@ -253,7 +293,8 @@
       <div class="image-container"><img src="../assets/modelo-1.png" alt="model"></div>
       <div class="items-container">
         <h2>Reserva tu departamento hoy</h2>
-        <p>Espacios funcionales y modernos diseñados para tu estilo de vida, ya sea que busques vivir, vacacionar o invertir</p>
+        <p>Espacios funcionales y modernos diseñados para tu estilo de vida, ya sea que busques vivir, vacacionar o
+          invertir</p>
         <div class="model-change">
           <div class="models">
             <p id="model-1" class="active">Torre A Modelo 1</p>
@@ -262,11 +303,11 @@
           </div>
           <div id="model-1-items">
             <p>81.19 m² interiores<br>6.19 m² terraza<br></p>
-            <button>ESTOY INTERESADO EN ESTE MODELO</button>
+            <button id="agendar-button4">ESTOY INTERESADO EN ESTE MODELO</button>
           </div>
           <div id="model-2-items">
             <p>110.33 m² interiores<br>10.96 m² terraza <br></p>
-            <button>ESTOY INTERESADO EN ESTE MODELO</button>
+            <button id="agendar-button5">ESTOY INTERESADO EN ESTE MODELO</button>
           </div>
         </div>
       </div>
@@ -278,8 +319,9 @@
   <section id="brochure-section" style="background-image: url('../assets/fondo-brochure.webp');">
     <div class="overlay">
       <h2>Conoce cada detalle de tu <b>nuevo hogar</b> en el caribe</h2>
-      <p>Accede al folleto completo con  <b>planos, departamentos modernos impresionantes</b> estimaciones de retorno de inversión y <b>todas las amenidades disponibles.</b></p>
-      <button><img src="../assets/download-white.png" alt="descarga">
+      <p>Accede al folleto completo con <b>planos, departamentos modernos impresionantes</b> estimaciones de retorno de
+        inversión y <b>todas las amenidades disponibles.</b></p>
+      <button id="agendar-button3"><img src="../assets/download-white.png" alt="descarga">
         <p>DESCARGA NUESTRO BROCHURE</p>
       </button>
     </div>
@@ -320,7 +362,8 @@
     <div class="text-container">
       <p><b>A solo 10 minutos</b> del segundo sistema de arrecifes más grande del mundo</p>
       <p>Vive a pasos de una de las maravillas naturales más impresionantes del planeta: el Arrecife Mesoamericano</p>
-      <p>Perfecto para amantes de la naturaleza, el buceo y para inversionistas que buscan una ubicación incomparable</p>
+      <p>Perfecto para amantes de la naturaleza, el buceo y para inversionistas que buscan una ubicación incomparable
+      </p>
 
     </div>
   </section>
@@ -355,9 +398,10 @@
     </div>
     <div class="part2">
       <p>Fase 1 <br>departamentos desde $2,900,000 MXN</p>
-      <p>Agenda una cita virtual con uno de nuestros expertos y recibe un bono de hasta 100,000 pesos MXN al invertir en tu nuevo departamento</p>
+      <p>Agenda una cita virtual con uno de nuestros expertos y recibe un bono de hasta 100,000 pesos MXN al invertir en
+        tu nuevo departamento</p>
       <p>Oferta válida por siete días</p>
-      <button>
+      <button id="agendar-button6">
         <p>AGENDA TU CITA VIRTUAL Y RECLAMA TU BONO EXCLUSIVO</p>
       </button>
     </div>

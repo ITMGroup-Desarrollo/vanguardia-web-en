@@ -3,19 +3,34 @@ const closeBtn = document.querySelector(".modal .close");
 const agendarBtn = document.getElementById("agendar-button");
 const agendarBtn2 = document.getElementById("agendar-button2");
 const agendarBtn3 = document.getElementById("agendar-button3");
+const agendarBtn4 = document.getElementById("agendar-button4");
+const agendarBtn5 = document.getElementById("agendar-button5");
+const agendarBtn6 = document.getElementById("agendar-button6");
 let brochureRequested = false;
 let formData = {};
 let contactoAnswer = "";
 let invertirAnswer = "";
 let precioAnswer = "";
 let motivotoAnswer = "";
-let interes = "Aldea Umm";
+let interes = "Vanguardia";
 // Mostrar modal
 agendarBtn.addEventListener("click", () => {
   modal.classList.remove("hidden");
   showStep(1);
 });
 agendarBtn2.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+  showStep(1);
+});
+agendarBtn4.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+  showStep(1);
+});
+agendarBtn5.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+  showStep(1);
+});
+agendarBtn6.addEventListener("click", () => {
   modal.classList.remove("hidden");
   showStep(1);
 });
@@ -36,7 +51,7 @@ function showStep(num) {
 }
 
 // Paso 1: Envío a HubSpot
-document.getElementById("Registro-Aldea-Umm").addEventListener("submit", (e) => {
+document.getElementById("Registro-Vanguardia").addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.target;
   formData = {
@@ -66,7 +81,7 @@ document.getElementById("Registro-Aldea-Umm").addEventListener("submit", (e) => 
   ).then((res) => {
     if (res.ok) {
       fbq("track", "Lead", {
-        content_name: "Registro Aldea Umm",
+        content_name: "Registro Vanguardia",
         form_location: "Landing Promocional",
       });
       document.getElementById(
@@ -207,7 +222,7 @@ window.addEventListener("message", function (event) {
   ) {
     // Disparar evento de Meta Pixel
     fbq('track', 'Schedule', {
-      content_name: 'Calendario Aldea Umm',
+      content_name: 'Calendario Vanguardia',
       form_location: 'Landing Promocional'
     });
 
