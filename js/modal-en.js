@@ -72,7 +72,7 @@ document.getElementById("Registro-Vanguardia").addEventListener("submit", (e) =>
   };
 
   fetch(
-    "https://api.hsforms.com/submissions/v3/integration/submit/39595277/204dfa24-d904-4215-97bb-bff75709aeb9",
+    "https://api.hsforms.com/submissions/v3/integration/submit/39595277/e82d2ed9-4750-41c0-9a41-44f2aaf3e3c5",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -167,7 +167,7 @@ function insertCalendar() {
   calendarDiv.className = "meetings-iframe-container";
   calendarDiv.setAttribute(
     "data-src",
-    `https://meetings.hubspot.com/octavio23?embed=true&${queryParams}`
+    `https://meetings.hubspot.com/octavio23/calendario-vanguardia?embed=true&${queryParams}`
   );
   container.appendChild(calendarDiv);
 
