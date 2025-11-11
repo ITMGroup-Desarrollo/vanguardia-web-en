@@ -101,9 +101,9 @@
 
     #discover-section {
         flex-direction: row;
+        height: fit-content;
         background-position: left;
         background-size: cover;
-        max-height: 80vh;
     }
 
     #discover-section .discover-list-container {

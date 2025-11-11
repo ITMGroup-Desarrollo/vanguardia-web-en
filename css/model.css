@@ -3,6 +3,7 @@
     color: var(--primary-color);
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 2rem;
 }
 
 #model-section .models {
@@ -62,7 +63,7 @@
 
 #model-section .image-container img {
     width: auto;
-    height: 80vh;
+    /* height: 80vh; */
     max-height: 100vh;
     object-fit: cover;
 }

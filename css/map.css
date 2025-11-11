@@ -50,14 +50,15 @@
     #map-section .chica-container{
     position: absolute;
     height: 80%;
-    max-height: 800px;
+    max-height: 600px;
+    overflow-y: visible;
     right: 20%;
     bottom: 0;
 }
     #map-section .chica-container img{
     height: 100%;
     width: 100%;
-    max-height: 800px;
+    max-height: 600px;
     object-fit: cover;
     display: block;
 }
