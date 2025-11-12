@@ -15,6 +15,16 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-MW928JC4');</script>
   <!-- End Google Tag Manager -->
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVVT8HG3LV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GVVT8HG3LV');
+</script>
+<!--  END Google tag (gtag.js) -->
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -91,18 +101,19 @@
   <!-- End Meta Pixel Code -->
   <div id="formModal" class="modal hidden">
     <div class="modal-content">
-      <!-- <span class="close">&times;</span> -->
+      <span class="close">&times;</span>
 
       <!-- Paso 1: Formulario -->
       <div class="step step-1">
-        <h2>AGENDA UNA CITA</h2>
+        <h2>Book your virtual appointment</h2>
         <form id="Registro-Aldea-Umm">
+          <!-- Registro-Aldea-Umm -->
           <div class="form-row">
-            <input type="text" name="firstname" placeholder="Nombre" required>
-            <input type="text" name="lastname" placeholder="Apellido" required>
+            <input type="text" name="firstname" placeholder="Name" required>
+            <input type="text" name="lastname" placeholder="Lastname" required>
           </div>
           <div class="form-row">
-            <div class="country-code" style="display: flex; gap: 0.5rem;">
+            <div class="country-code" style="display: flex; gap: 0.5rem; ">
               <select id="countryCode" name="countryCode" required>
                 <option value="+1">US +1</option>
                 <option value="+52">MX +52</option>
@@ -113,67 +124,67 @@
               </select>
               <input type="tel" name="phone" placeholder="1234567890" required>
             </div>
-            <input type="email" name="email" placeholder="Correo Electronico" required>
+            <input type="email" name="email" placeholder="Email" required>
           </div>
-          <button type="submit">Siguiente</button>
+          <button type="submit">Next</button>
         </form>
       </div>
 
       <!-- Paso 2: Encuesta intro -->
       <div class="step step-2 hidden">
         <h2 id="surveyIntro"></h2>
-        <button id="toStep3">Siguiente</button>
+        <button id="toStep3">Next</button>
       </div>
 
-      <!-- Paso 3: Pregunta de contacto -->
+      <!-- Paso 3: Pregunta de motivo -->
       <div class="step step-3 hidden">
         <h2 id="motivoQuestion"></h2>
         <div class="answers-container">
-          <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Vivirlo y disfrutarlo (uso
-            propio)</label>
-          <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y
-            generar plusvalía o rentas (inversión)</label>
-          <label><input type="radio" name="motivo" value="Soy asesor o broker (buscando opciones para mis clientes)">Soy
-            asesor o broker (buscando opciones para mis clientes)</label>
+          <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Live it and enjoy it (own
+          use)</label>
+        <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y generar plusvalía o rentas (inversión)</label>
+        <label><input type="radio" name="motivo"
+            value="Soy asesor o broker (buscando opciones para mis clientes)">I am an
+          advisor or broker (looking for options for my clients)</label>
         </div>
         <div class="forms-button-container">
-          <button class="back-button" data-back-step="2">Atrás</button>
-          <button id="toStep4">Siguiente</button>
+          <button class="back-button" data-back-step="2">Back</button>
+          <button id="toStep4">Next</button>
         </div>
       </div>
-
-      <!-- Paso 4: Pregunta de inversión -->
+      <!-- Step 4: Investment timing question -->
       <div class="step step-4 hidden">
-        <h2>¿Qué tan pronto te gustaría invertir en tu nuevo lote residencial?</h2>
+        <h2>How soon would you like to invest in your new department?</h2>
         <div class="answers-container">
-          <label><input type="radio" name="invertir" value="De inmediato">De inmediato</label>
-          <label><input type="radio" name="invertir" value="En los próximos meses">En los próximos meses</label>
-          <label><input type="radio" name="invertir" value="A largo plazo">A largo plazo</label>
+          <label><input type="radio" name="invertir" value="De inmediato">Immediately</label>
+          <label><input type="radio" name="invertir" value="En los próximos meses">In the coming months</label>
+          <label><input type="radio" name="invertir" value="A largo plazo">Long term</label>
         </div>
         <div class="forms-button-container">
-          <button class="back-button" data-back-step="3">Atrás</button>
-          <button id="toStep5">Siguiente</button>
+          <button class="back-button" data-back-step="3">Back</button>
+          <button id="toStep5">Next</button>
         </div>
       </div>
 
-      <!-- Paso 5: Pregunta de precio -->
+      <!-- Step 5: Price awareness question -->
       <div class="step step-5 hidden">
-        <h2>¿Estás consciente de que nuestros lotes residenciales comienzan en $1,100,000 MXN?</h2>
+        <h2>Are you aware that our departments start at $2,900,000 MXN?</h2>
         <div class="answers-container">
-          <label><input type="radio" name="precio" value="Si">Sí</label>
+          <label><input type="radio" name="precio" value="si">Yes</label>
           <label><input type="radio" name="precio" value="No">No</label>
         </div>
         <div class="forms-button-container">
-          <button class="back-button" data-back-step="4">Atrás</button>
-          <button id="toStep6">Siguiente</button> <!-- Ahora va directo al calendario -->
+          <button class="back-button" data-back-step="4">Back</button>
+          <button id="toStep6">Next</button>
         </div>
       </div>
 
-      <!-- Paso 6: Calendario -->
+      <!-- Step 6: Calendar -->
       <div class="step step-6 hidden">
-        <h2>Selecciona tu cita</h2>
+        <h2>Select your appointment</h2>
         <div id="calendarContainer"></div>
       </div>
+
 
     </div>
   </div>
