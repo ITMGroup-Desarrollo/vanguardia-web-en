@@ -40,7 +40,7 @@ agendarBtn3.addEventListener("click", () => {
   showStep(1);
 });
 // Cerrar modal
-closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
+// closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
 
 // Control de pasos
 function showStep(num) {
