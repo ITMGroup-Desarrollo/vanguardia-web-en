@@ -40,7 +40,7 @@ agendarBtn3.addEventListener("click", () => {
   showStep(1);
 });
 // Cerrar modal
-closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
+// closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
 
 // Control de pasos
 function showStep(num) {
@@ -51,7 +51,7 @@ function showStep(num) {
 }
 
 // Paso 1: Envío a HubSpot
-document.getElementById("Registro-Vanguardia").addEventListener("submit", (e) => {
+document.getElementById("Registro-Vanguardia-es").addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.target;
   formData = {
